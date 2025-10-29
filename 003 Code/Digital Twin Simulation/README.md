@@ -27,7 +27,7 @@ python app.py
 
 ## 5. Unreal 에셋 다운로드
 Unreal 프로젝트 실행시 Content/폴더가 필요합니다.<br>
-파일 용량 문제로, 에셋은 Google Drive에 별도 첨부하였습니다.
+(파일 용량 문제로 인해 에셋은 Google Drive에 별도 첨부)<br>
 - 링크 : https://drive.google.com/file/d/1WTVutaAZqCYgSe-1KS6SbL6c9LWu79GC/view?usp=drive_link
 
 - 설치 방법

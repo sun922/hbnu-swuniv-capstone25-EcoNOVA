@@ -7,6 +7,7 @@
 
 ## 2. InfluxDB 실행
 ```bash
+# Windows PowerShell
 influxd.exe
 ```
 

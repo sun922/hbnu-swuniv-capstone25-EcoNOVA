@@ -127,3 +127,52 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# ===== Unreal Engine =====
+# Build & Cache
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Config backups and logs
+*.log
+*.tmp
+*.bak
+
+# IDE files
+.vscode/
+.vs/
+*.VC.db
+*.sln
+
+# Auto-generated project files
+*.opensdf
+*.sdf
+*.suo
+*.user
+*.userprefs
+
+# Mac / Windows system junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Optional: Ignore local auto-saves and screenshots
+Saved/Autosaves/
+Saved/Backup/
+Saved/Logs/
+Saved/Screenshots/
+
+# Optional: Unreal LFS assets (if you're using Git LFS)
+# These are large binary files typically managed by Git LFS.
+# Uncomment if you're tracking them separately:
+# Content/**/*.uasset
+# Content/**/*.umap
+
+# Optional: Plugins or temporary assets (if generated)
+# Plugins/*/Binaries/
+# Plugins/*/Intermediate/
+# Plugins/*/Saved/
+# ===== End Unreal Engine =====

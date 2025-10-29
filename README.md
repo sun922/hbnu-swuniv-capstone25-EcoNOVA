@@ -33,35 +33,27 @@
     - 품질 예측, 유사 공정 비교, 센서 중요도 분석 결과를 통합 표시  
     - ECharts를 활용해 다양한 공정 지표를 직관적으로 표현
     <p align="center">
-    <img width="700" alt="dashboard" src="https://github.com/user-attachments/assets/a71df513-4f7f-4ace-a2c2-3be1881d9e12" />
+    <img width="600" alt="dashboard" src="https://github.com/user-attachments/assets/a71df513-4f7f-4ace-a2c2-3be1881d9e12" />
     </p>
     - 추가 기능
         -  Info Hub 페이지: 공정 계획, 메모, 알림, 뉴스 등 다양한 운전 정보를 한 화면에서 관리
         -   Custom 페이지: 실제 공장 작업자 인터뷰를 통해 도출된 현장 맞춤형 기능으로, 각 공정에 필요한 그래프만 선택적으로 표시
             <p align="center">
-            <img width="400" alt="info-hub" src="https://github.com/user-attachments/assets/9e059c10-e10b-408e-bc10-690cc6addab4" />
-            &nbsp;&nbsp;&nbsp;
-            <img width="400" alt="custom" src="https://github.com/user-attachments/assets/71a44bf4-b2c4-4748-8746-39c45adfd150" />
+            <img width="800" alt="추가1" src="https://github.com/user-attachments/assets/16ee4844-2401-4537-ab07-57ef8fc1fe70" />
             </p>   
         - 다크모드 / 라이트모드 전환:  사용자 환경에 맞는 시각적 편의성 확보
         - 포커스 검색 기능 지원: 설비명, 변수명등을 빠르게 탐색 가능
-                <p align="center">
-                <img width="290" alt="dashboard-wh" src="https://github.com/user-attachments/assets/ea943c2f-aa14-4225-bc48-1d97d57e2a5c" />
-                &nbsp;&nbsp;&nbsp;
-                <img width="290" alt="dashboard_fo" src="https://github.com/user-attachments/assets/4c1fb4f2-d017-46ea-a43b-4c69b94ca5c6" />
-                &nbsp;&nbsp;&nbsp;
-                <img width="290" alt="custom_fo" src="https://github.com/user-attachments/assets/418ebf92-169a-4223-9e53-ebbb167f4dbb" />
-                </p>
+            <p align="center">
+            <img width="1000" alt="추가2" src="https://github.com/user-attachments/assets/3f5f7a96-4b35-4184-b141-4078caedc707" />
+            </p>
 
   3. **디지털 트윈 시뮬레이션** <br>
     - Unreal Engine 기반 가상 공정 환경 구축  
     - Flask API로 전달된 예측 데이터를 HUD 및 3D UI에 반영  
     - 시뮬레이션을 통해 공정 상태 변화에 따른 품질, 에너지 상황을 반환
-    <p align="center">
-    <img width="550" alt="digital-twin" src="https://github.com/user-attachments/assets/46fd77ae-cfe3-421f-8c1a-04684f663ec8" />
-    &nbsp;&nbsp;&nbsp;
-    <img width="250" alt="트윈 화면" src="https://github.com/user-attachments/assets/b6958310-cede-402c-b39b-b19f13f6318f" />
-    </p>
+     <p align="center">
+     <img width="800" alt="디지털트윈" src="https://github.com/user-attachments/assets/ec9b54ba-a48a-4aac-a9da-26a1c57ec700" />
+     </p>
 
 ## Case Study
   - ### Description

@@ -27,3 +27,4 @@
   
 ## Project Outcome
 - ### 20XX 년 OO학술대회 
+<img width="3863" height="1698" alt="학술대회" src="https://github.com/user-attachments/assets/5c6429c0-fe35-4557-929f-7cc2959c48fe" />

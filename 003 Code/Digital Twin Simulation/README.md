@@ -27,8 +27,11 @@ python app.py
 
 ## 5. Unreal 에셋 다운로드
 Unreal 프로젝트 실행시 Content/폴더가 필요합니다.
+
 파일 용량 문제로, 에셋은 Google Drive에 별도 첨부하였습니다.
+
 링크 : https://drive.google.com/file/d/1WTVutaAZqCYgSe-1KS6SbL6c9LWu79GC/view?usp=drive_link
+
 설치 방법
 1. 위 링크에서 unreal_assets.zip 파일 다운로드
 2. 압축 해제 후 내부의 Content/, Saved/, DerivedDataChche/ 폴더를 .uproject 파일이 있는 폴더(프로젝트 루트)에 붙여넣기

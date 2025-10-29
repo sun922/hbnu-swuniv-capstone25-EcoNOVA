@@ -1,0 +1,21 @@
+.productionPlan{ grid-area: productionPlan; }
+.noiseLevel{ grid-area: noiseLevel; }
+.weather{ grid-area: weather; }
+.notice{ grid-area: notice; }
+.shiftNotes{ grid-area: shiftNotes; }
+.celebrations{ grid-area: celebrations; }
+
+.InfoHubPositon{
+    display: grid;
+    height: 100%;
+    gap: 10px;
+    padding: 12px;
+    overflow: auto; 
+
+    grid-template-areas:
+    "productionPlan productionPlan noiseLevel weather weather"
+    "notice shiftNotes shiftNotes shiftNotes celebrations";
+    
+    grid-template-rows: 600px 800px;
+    grid-template-columns: 4fr 1fr 2fr 1fr 4fr;
+}

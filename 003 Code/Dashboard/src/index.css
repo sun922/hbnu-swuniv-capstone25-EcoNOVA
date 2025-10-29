@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+  /* 기본 색상 */
+  --bg: #f4f6f9; 
+  --panel: #fafafa; 
+  --border: #e6e9ef;
+  --shadow: 0 1px 2px rgba(20,24,40,.06),0 4px 12px rgba(20,24,40,.04);
+  --text: #1f2937; 
+  --muted: #6b7280; 
+  --brand: #01D5F6;
+  --sidebar-bg: #1f2432; 
+  --sidebar-active: #2a3042; 
+  --accent-soft: #eef2ff;
+  --band: #b5b5b52f;
+  
+  /* 추가 색상 */
+  --success: #10b981;
+  --success-hover: #059669;
+  --cancel: #dd281b;
+  --danger: #d1d1d1;
+  --danger-hover: #c82333;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+  --primary: #00bcd4;
+  --secondary: #6c757d;
+  --light: #f8f9fa;
+  --dark: #2c3e50;
+  
+  /* 그레이 스케일 */
+  --gray-50: #f8f9fa;
+  --gray-100: #f1f3f4;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  
+  /* 상태 색상 */
+  --error-bg: #ffebee;
+  --error-border: #f44336;
+  --error-text: #d32f2f;
+  --warning-bg: #fff3e0;
+  --warning-border: #ff9800;
+  --warning-text: #f57c00;
+  --success-bg: #e8f5e8;
+  --success-border: #4caf50;
+  --success-text: #2e7d32;
+  
+  /* 하이라이트 색상 */
+  --highlight: #01d5f61a;
+  --highlight-border: #01D5F6;
+  --highlight-shadow: rgba(1, 213, 246, 0.5);
+  
+  /* 스크롤바 색상 */
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #c1c1c1;
+  --scrollbar-thumb-hover: #a8a8a8;
+}
+
+/* 다크모드 */
+[data-theme="dark"] {
+  /* 기본 색상 */
+  --bg: #0d1117; 
+  --panel: #161b22; 
+  --border: #21262d;
+  --shadow: 0 1px 2px rgba(0,0,0,.3),0 4px 12px rgba(0,0,0,.2);
+  --text: #e2e8f0; 
+  --muted: #a0aec0; 
+  --brand: #01D5F6;
+  --sidebar-bg: #1f2432; 
+  --sidebar-active: #161b22; 
+  --accent-soft: #1e293b;
+  --band: #00000050;
+  
+  /* 추가 색상 */
+  --success: #10b981;
+  --success-hover: #059669;
+  --danger: #10141f;
+  --danger-hover: #dc2626;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+  --primary: #00bcd4;
+  --secondary: #64748b;
+  --light: #21262d;
+  --dark: #f1f5f9;
+  
+  /* 그레이 스케일 */
+  --gray-50: #1e293b;
+  --gray-100: #334155;
+  --gray-200: #475569;
+  --gray-300: #64748b;
+  --gray-400: #94a3b8;
+  --gray-500: #cbd5e1;
+  --gray-600: #e2e8f0;
+  --gray-700: #f1f5f9;
+  --gray-800: #f8fafc;
+  --gray-900: #ffffff;
+  
+  /* 상태 색상 */
+  --error-bg: #2d1b1b;
+  --error-border: #f87171;
+  --error-text: #fca5a5;
+  --warning-bg: #2d2419;
+  --warning-border: #fbbf24;
+  --warning-text: #fcd34d;
+  --success-bg: #1b2d1b;
+  --success-border: #34d399;
+  --success-text: #6ee7b7;
+  
+  /* 하이라이트 색상 */
+  --highlight: #01d5f61a;
+  --highlight-border: #01D5F6;
+  --highlight-shadow: rgba(1, 213, 246, 0.3);
+  
+  /* 스크롤바 색상 */
+  --scrollbar-track: #2d3748;
+  --scrollbar-thumb: #4a5568;
+  --scrollbar-thumb-hover: #718096;
+}
+
+/* 다크모드 스타일 */
+[data-theme="dark"] h4 {
+  color: #f1f5f9 !important;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .card h4 {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .echarts-for-react .echarts-title {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] [data-title]::before {
+  color: #f1f5f9 !important;
+  font-weight: 600;
+}
+
+/* 스크롤바 스타일 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+  border: 1px solid var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+*::-webkit-scrollbar-corner {
+  background: var(--scrollbar-track);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

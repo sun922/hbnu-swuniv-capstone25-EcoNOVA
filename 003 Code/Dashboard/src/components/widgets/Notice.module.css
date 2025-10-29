@@ -1,0 +1,191 @@
+.noticeWidget {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 20px;
+    color: var(--text);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* transition: all 0.2s ease; */
+    position: relative;
+}
+
+.noticeHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent-soft);
+    min-height: 48px;
+}
+
+.noticeHeader h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filterContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filterSelect {
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    background: var(--panel);
+    color: var(--text);
+    cursor: pointer;
+    outline: none;
+    /* transition: all 0.2s ease; */
+    min-width: 80px;
+}
+
+/* .filterSelect:focus {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 2px rgba(1, 213, 246, 0.1);
+} */
+
+.filterSelect:hover {
+    border-color: var(--brand);
+    background: var(--light);
+}
+
+.noticeList {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.emptyNotice {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.emptyIcon {
+    font-size: 3rem;
+    color: var(--brand);
+    opacity: 0.5;
+}
+
+.emptyNotice p {
+    margin: 0;
+    font-style: italic;
+}
+
+.noticeItem {
+    padding: 16px;
+    background: transparent;
+    border-radius: 3px;
+    border-left: 3px solid var(--gray-300);
+    /* transition: all 0.2s ease; */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.noticeItem:hover {
+    background: var(--light);
+    border-left-color: var(--brand);
+}
+
+.noticeIconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.noticeIconContainer svg {
+    font-size: 14px;
+    color: var(--brand);
+}
+
+.noticeContent {
+    flex: 1;
+}
+
+.noticeTitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.noticeType {
+    padding: 2px 6px;
+    background: var(--gray-100);
+    color: var(--muted);
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.noticeDescription {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.noticeMeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.noticeDate {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    font-weight: 400;
+}
+
+/* 스크롤바 스타일 */
+.noticeWidget::-webkit-scrollbar {
+    width: 4px;
+}
+
+.noticeWidget::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 2px;
+}
+
+.noticeWidget::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 2px;
+}
+
+.noticeWidget::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}

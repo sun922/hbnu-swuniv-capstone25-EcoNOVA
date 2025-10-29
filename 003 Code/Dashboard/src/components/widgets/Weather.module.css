@@ -1,0 +1,303 @@
+/* WeatherWidget 모듈 CSS */
+.weatherWidget {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 20px;
+    color: var(--text);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    /* transition: all 0.2s ease; */
+}
+
+
+.weatherHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent-soft);
+    min-height: 48px; /* 최소 높이 설정으로 통일 */
+}
+
+.headerControls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.apiToggle {
+    background: var(--brand);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    /* transition: all 0.2s ease; */
+    box-shadow: 0 2px 8px rgba(1, 213, 246, 0.3);
+}
+
+.apiToggle:hover {
+    background: #00b8d4;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(1, 213, 246, 0.4);
+}
+
+.apiToggle:active {
+    transform: translateY(0);
+}
+
+.weatherHeader h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.location {
+    background: var(--brand);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    /* box-shadow: 0 2px 8px rgba(1, 213, 246, 0.3); */
+}
+
+.weatherContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.weatherMain {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px;
+    background: var(--light);
+    border-radius: 3px;
+    border: 1px solid var(--border);
+}
+
+.weatherIcon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--brand) 0%, #00bcd4 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    box-shadow: 0 2px 14px rgba(1, 213, 246, 0.212);
+}
+
+.weatherInfo h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1;
+}
+
+.weatherInfo p {
+    margin: 4px 0 0 0;
+    font-size: 1rem;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.weatherDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.weatherDetail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: var(--panel);
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    /* transition: all 0.2s ease; */
+}
+
+.weatherDetail:hover {
+    background: var(--accent-soft);
+    border-color: var(--brand);
+    transform: translateY(-1px);
+}
+
+.weatherDetail span {
+    font-size: 0.875rem;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.weatherDetail strong {
+    font-size: 0.875rem;
+    color: var(--text);
+    font-weight: 700;
+}
+
+.lastUpdate {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: var(--accent-soft);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-align: center;
+    border-left: 3px solid var(--brand);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .weatherDetails {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 스크롤바 스타일 */
+.weatherWidget::-webkit-scrollbar {
+    width: 4px;
+}
+
+.weatherWidget::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 2px;
+}
+
+.weatherWidget::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 2px;
+}
+
+.weatherWidget::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}
+
+.loadingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.loading {
+    color: var(--muted);
+    font-style: italic;
+}
+
+/* 추가된 스타일들 */
+.feelsLike {
+    font-size: 0.875rem;
+    color: var(--text-soft);
+    margin-top: 4px;
+    opacity: 0.8;
+}
+
+/* 상세 날씨 정보 스타일 */
+.weatherDetails {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detailRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.detailItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(1, 213, 246, 0.137);
+    border-radius: 6px;
+    border: 1px solid rgba(1, 213, 246, 0.1);
+    /* transition: all 0.2s ease; */
+}
+
+.detailItem:hover {
+    background: rgba(1, 213, 246, 0.1);
+    transform: translateY(-1px);
+}
+
+.detailIcon {
+    font-size: 1rem;
+    color: var(--brand);
+    min-width: 16px;
+}
+
+.detailItem span:first-of-type {
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    font-weight: 500;
+    min-width: 50px;
+}
+
+.detailValue {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-left: auto;
+}
+
+/* 대기질 스타일 */
+.airQuality {
+    margin-top: 16px;
+    padding: 12px;
+    background: linear-gradient(135deg, rgba(1, 213, 246, 0.137), rgba(1, 213, 246, 0.05));
+    border-radius: 6px;
+    border: 1px solid rgba(1, 213, 246, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aqLabel {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.aqValue {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.aqText {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--brand);
+}
+
+.aqNumber {
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    background: rgba(1, 213, 246, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+}

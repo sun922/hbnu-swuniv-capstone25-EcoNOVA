@@ -1,0 +1,36 @@
+.card2 { grid-area: card2; }
+.card3 { grid-area: card3; }
+.card4 { grid-area: card4; }
+.card5 { grid-area: card5; }
+.card6 { grid-area: card6; }
+.card7 { grid-area: card7; }
+.card8 { grid-area: card8; }
+.card9 { grid-area: card9; }
+
+.cardgruop {
+  /* margin: 30px; */
+  gap: 12px;
+  display: grid;
+  grid:
+  "card1 card4 card4 card3" 95px
+  "card1 card7 card7 card3" 280px
+  "card1 card7 card7 card2" 50px
+  "card1 card9 card9 card2" 300px
+  "card1 card8 card5 card2" 50px
+  "card1 card8 card5 card6" 400px
+  / 4fr  2fr 3fr 4fr; /* gap 제외하고 비율로 분배 */
+  width: 100%;
+
+}
+.card1 { 
+  grid-area: card1; 
+  gap: 12px;
+  display: grid;
+  grid:
+  "card1_1" 1fr
+  "card1_2" 1fr
+  "card1_3" 1fr
+  "card1_4" 1fr
+  "card1_5" 1fr
+  / 1fr
+}

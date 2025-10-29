@@ -1,0 +1,284 @@
+/* MemoWidget 모듈 CSS */
+.memoWidget {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 20px;
+    color: var(--text);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* transition: all 0.2s ease; */
+}
+
+/* .memoWidget:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(1, 213, 246, 0.15);
+    border-color: var(--brand);
+} */
+
+.memoHeader {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent-soft);
+    min-height: 48px;
+}
+
+.memoHeader h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* .memoHeader h3::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: var(--brand);
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 8px;
+} */
+
+.currentShift {
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+}
+
+.memoInput {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.memoInput textarea {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    outline: none;
+    /* transition: all 0.2s ease; */
+    background: var(--panel);
+    resize: vertical;
+    min-height: 60px;
+}
+
+/* .memoInput textarea:focus {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px rgba(1, 213, 246, 0.1);
+} */
+
+.addButton {
+    padding: 12px 20px;
+    background: var(--brand);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    /* transition: all 0.2s ease; */
+    box-shadow: 0 2px 4px rgba(1, 213, 246, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.addButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(1, 213, 246, 0.4);
+}
+
+.memoList {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.emptyMemo {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--muted);
+    font-style: italic;
+}
+
+.memoItem {
+    padding: 16px;
+    background: transparent;
+    border-radius: 3px;
+    border-left: 4px solid var(--brand);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    /* transition: all 0.2s ease; */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.memoItem[data-shift="주간"] {
+    border-left-color: var(--success);
+}
+
+.memoItem[data-shift="오후"] {
+    border-left-color: var(--warning);
+}
+
+.memoItem[data-shift="야간"] {
+    border-left-color: var(--info);
+}
+
+.memoItem:hover {
+    background: var(--accent-soft);
+    transform: translateX(4px);
+    /* box-shadow: 0 4px 12px rgba(1, 213, 246, 0.1); */
+}
+
+.memoContent {
+    flex: 1;
+}
+
+.memoText {
+    font-size: 0.875rem;
+    color: var(--text);
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+}
+
+.memoMeta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.75rem;
+}
+
+.memoShift {
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+}
+
+.memoTime {
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.editMode {
+    width: 100%;
+}
+
+.editMode textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid var(--brand);
+    border-radius: 6px;
+    font-size: 0.875rem;
+    outline: none;
+    resize: vertical;
+    min-height: 50px;
+    margin-bottom: 8px;
+}
+
+.editButtons {
+    display: flex;
+    gap: 8px;
+}
+
+.saveButton, .cancelButton {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    /* transition: all 0.2s ease; */
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.saveButton {
+    background: #10b981;
+    color: white;
+}
+
+.saveButton:hover {
+    background: #059669;
+}
+
+.cancelButton {
+    background: #ef4444;
+    color: white;
+}
+
+.cancelButton:hover {
+    background: #dc2626;
+}
+
+.memoActions {
+    display: flex;
+    gap: 6px;
+}
+
+.editButton, .deleteButton {
+    padding: 6px 10px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    cursor: pointer;
+    /* transition: all 0.2s ease; */
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.editButton:hover {
+    background: var(--brand);
+    color: white;
+    border-color: var(--brand);
+}
+
+.deleteButton:hover {
+    background: #ef4444;
+    color: white;
+    border-color: #ef4444;
+}
+
+/* 스크롤바 스타일 */
+.memoWidget::-webkit-scrollbar {
+    width: 4px;
+}
+
+.memoWidget::-webkit-scrollbar-track {
+    background: var(--accent-soft);
+    border-radius: 2px;
+}
+
+.memoWidget::-webkit-scrollbar-thumb {
+    background: var(--brand);
+    border-radius: 2px;
+}
+
+.memoWidget::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}

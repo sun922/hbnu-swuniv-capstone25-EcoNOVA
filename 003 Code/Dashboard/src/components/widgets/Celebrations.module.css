@@ -1,0 +1,172 @@
+.celebrationWidget {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 20px;
+    color: var(--text);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* transition: all 0.2s ease; */
+    position: relative;
+}
+
+.celebrationHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent-soft);
+    min-height: 48px;
+}
+
+.celebrationHeader h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.celebrationList {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.emptyCelebration {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.emptyIcon {
+    font-size: 3rem;
+    color: var(--brand);
+    opacity: 0.5;
+}
+
+.emptyCelebration p {
+    margin: 0;
+    font-style: italic;
+}
+
+.celebrationItem {
+    padding: 16px;
+    background: transparent;
+    border-radius: 3px;
+    border-left: 3px solid var(--gray-300);
+    /* transition: all 0.2s ease; */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 8px;
+}
+
+.celebrationItem:hover {
+    background: var(--light);
+    border-left-color: var(--brand);
+}
+
+.celebrationContent {
+    flex: 1;
+}
+
+.celebrationTitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.celebrationType {
+    padding: 2px 6px;
+    background: var(--gray-100);
+    color: var(--muted);
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.celebrationDescription {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.celebrationMeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.celebrationDate {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    font-weight: 400;
+}
+
+.likeButton {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: transparent;
+    border: 1px solid var(--gray-300);
+    border-radius: 15px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    cursor: pointer;
+    /* transition: all 0.2s ease; */
+}
+
+.likeButton:hover {
+    background: var(--gray-100);
+    border-color: var(--gray-400);
+}
+
+.likeButton.liked {
+    background: var(--error-bg);
+    border-color: var(--error-border);
+    color: var(--error-text);
+}
+
+.likeButton.liked svg {
+    color: var(--error-text);
+}
+
+
+/* 스크롤바 스타일 */
+.celebrationWidget::-webkit-scrollbar {
+    width: 4px;
+}
+
+.celebrationWidget::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 2px;
+}
+
+.celebrationWidget::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 2px;
+}
+
+.celebrationWidget::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+}

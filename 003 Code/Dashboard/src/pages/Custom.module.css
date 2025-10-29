@@ -1,0 +1,369 @@
+.customContainer {
+    display: flex;
+    height: 100%;
+    gap: 12px;
+    padding: 0px 12px 12px 12px;
+}
+
+/* 사이드바 */
+.sidebar {
+    width: 200px;
+    background: var(--panel);
+    /* border: 1px solid var(--gray-200); */
+    border-radius: 3px;
+    padding: 16px;
+    overflow-y: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    color: var(--text);
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.chartList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.chartButton {
+    background: var(--highlight);
+    border: 1px solid var(--brand);
+    color: var(--text);
+    padding: 12px 17px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    /* transition: all 0.2s ease; */
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chartButton:hover {
+    background: var(--gray-200);
+    border-color: var(--gray-500);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.chartButton:active {
+    transform: translateY(0);
+}
+
+.clearAllBtn {
+    background: var(--cancel);
+    border: 1px solid var(--cancel);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    /* transition: all 0.2s ease; */
+    text-align: center;
+    margin-top: 16px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.clearAllBtn:hover {
+    background: var(--danger-hover);
+    border-color: var(--danger-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.clearAllBtn:active {
+    transform: translateY(0);
+}
+
+/* 캔버스 영역 */
+.canvas {
+    flex: 1;
+    background: var(--panel);
+    /* border: 1px solid var(--gray-200); */
+    border-radius: 3px;
+    position: relative;
+    overflow: auto;
+    min-height: 500px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.emptyMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--muted);
+    font-size: 18px;
+    text-align: center;
+}
+
+/* 차트 카드 */
+.chartCard {
+    background: var(--panel);
+    border: 1px solid var(--gray-100);
+    border-radius: 3px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+}
+
+.chartCard:hover {
+    border-color: var(--gray-500);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.chartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--light);
+    border-bottom: 1px solid var(--gray-300);
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.removeBtn {
+    background: var(--danger);
+    border: none;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.removeBtn:hover {
+    background: var(--danger-hover);
+}
+
+.chartContent {
+    height: calc(100% - 40px);
+    overflow: hidden;
+}
+
+/* 리사이즈 핸들 */
+.resizeHandle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background: var(--gray-400);
+    cursor: se-resize;
+    border-radius: 0 0 3px 0;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.resizeHandle:hover {
+    opacity: 1;
+    background: var(--info);
+}
+
+.chartCard:hover .resizeHandle {
+    opacity: 1;
+}
+
+/* 검색 하이라이트 스타일 */
+.chartHighlight {
+    border: 2px solid var(--highlight-border) !important;
+    box-shadow: 0 0 10px var(--highlight-shadow) !important;
+}
+/* 드래그 중 스타일 */
+.canvas.dragOver {
+    background: var(--light);
+    border: 2px dashed var(--success);
+}
+
+/* 스티커 메모 스타일 */
+.stickerSection {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.addStickerBtn {
+    background: var(--success);
+    border: 1px solid var(--success);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.addStickerBtn:hover {
+    background: var(--success-hover);
+    border-color: var(--success-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 스티커 메모 */
+.sticker {
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    user-select: none;
+    transition: box-shadow 0.2s ease;
+    min-width: 150px;
+    min-height: 80px;
+    z-index: 1000;
+}
+
+.sticker:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stickerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--light);
+    border-bottom: 1px solid var(--gray-300);
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: grab;
+    user-select: none;
+}
+
+.stickerTitle {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+    user-select: none;
+}
+
+.stickerDeleteBtn {
+    background: var(--danger);
+    border: none;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.stickerDeleteBtn:hover {
+    background: var(--danger-hover);
+}
+
+.stickerContent {
+    padding: 12px;
+    height: calc(100% - 40px);
+    overflow: hidden;
+    background: var(--panel);
+}
+
+.stickerText {
+    width: 100%;
+    height: 100%;
+    color: var(--text);
+    font-size: 14px;
+    font-family: inherit;
+    line-height: 1.4;
+    cursor: text;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.stickerTextarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 14px;
+    font-family: inherit;
+    resize: none;
+    outline: none;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.stickerTextarea::placeholder {
+    color: var(--muted);
+}
+
+.stickerResizeHandle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background: var(--gray-400);
+    cursor: se-resize;
+    border-radius: 0 0 8px 0;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.stickerResizeHandle:hover {
+    opacity: 1;
+    background: var(--info);
+}
+
+.sticker:hover .stickerResizeHandle {
+    opacity: 1;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .customContainer {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+    }
+    
+    .chartList {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .chartButton {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .sticker {
+        width: 150px;
+        min-height: 100px;
+    }
+}

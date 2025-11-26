@@ -12,7 +12,7 @@ from influxdb_client import InfluxDBClient
 
 # 🔹 InfluxDB 연결 정보
 INFLUX_URL = "http://localhost:8086"
-INFLUX_TOKEN = "eIZZV42-KIlXV6TiT-tDD92zhOQ32mSC7Tp1hZslOu9a9YPbON3e7VZL2KH3mhRsEsH99PEOyYQrQbDRfRpRNw=="  # 환경 변수에 토큰 저장
+INFLUX_TOKEN = "my_token" // 개인 토큰 입력
 INFLUX_ORG = "my-org"
 INFLUX_BUCKET = "test"
 

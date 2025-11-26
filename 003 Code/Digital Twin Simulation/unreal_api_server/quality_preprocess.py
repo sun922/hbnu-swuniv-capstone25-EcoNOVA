@@ -6,7 +6,7 @@ import numpy as np
 from scipy.stats import iqr
 
 INFLUX_URL = "http://localhost:8086"
-INFLUX_TOKEN = "eIZZV42-KIlXV6TiT-tDD92zhOQ32mSC7Tp1hZslOu9a9YPbON3e7VZL2KH3mhRsEsH99PEOyYQrQbDRfRpRNw=="
+INFLUX_TOKEN = "my_token" // 개인 토큰 입력
 INFLUX_ORG = "my-org"
 INFLUX_BUCKET = "test"
 

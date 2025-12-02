@@ -20,9 +20,9 @@
     시스템은 **모델링 및 분석 모듈**, **웹 대시보드**, **디지털 트윈 시뮬레이션**으로 구성된다. <br>
     데이터 분석을 통해 품질 및 에너지 요인을 도출하고, 결과를 시각화하여 실시간으로 운전 상태를 확인할 수 있다.
     <p align="center">
-    <img width="700" alt="image" src="https://github.com/user-attachments/assets/55c5a0e5-498d-45bb-abc0-75b88c7592e9" />
+    <img width="700" alt="image" src="https://github.com/user-attachments/assets/707437b3-6eef-468b-9252-f2594d4e26d1" />
     </p>
-    
+
   1. **모델링 및 분석 모듈** <br>
     - 공정 데이터를 활용해 품질 점수와 스팀 사용량 예측 모델을 구축  
     - 주요 공정 변수(속도, 수분, 압력 등)의 영향도를 분석  
